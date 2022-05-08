@@ -12,6 +12,12 @@
                 <card />
                 <card />
             </div>
+            <div class="row">
+                <card />
+                <card />
+                <card />
+                <card />
+            </div>
         </div>
     </div>
 </template>
@@ -36,7 +42,7 @@
 
         margin: 10vh 0;
         width: 80vw;
-        height: 50vh;
+        height: 60vh;
     }
     div#page{
         background-color: #161923;
