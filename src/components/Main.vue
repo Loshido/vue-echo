@@ -45,6 +45,14 @@ export default {
         padding: 0 10vw;
         font-size: 30px;
     }
+    .link:hover{
+        text-decoration: none;
+	    box-shadow: 0 0 10px #f40552;
+        background-color: #f40552;
+    }
+    .link{
+        padding: 5px;
+    }
     #s1 p{
         padding: 50px 0;
         font-weight: 500;

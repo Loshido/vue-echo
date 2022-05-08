@@ -12,7 +12,7 @@
 			<Header/>
 			<Main />
 		</div>
-		<p id="ut">{{Texts.warning}}</p>
+		<p id="ut" v-html="Texts.warning"></p>
 	</section>
 	<section class="module">
 		<h1>Features</h1>
@@ -27,14 +27,14 @@
 		</div>
 		<h2>
 			{{Texts.nolimits}}
-			<a href="https://vuejs.org/" target="_blank">VueJS</a>
+			<a class="link" href="https://vuejs.org/" target="_blank">VueJS</a>
 		</h2>
 	</section>
 	<section class="module" id="faq">
 		<h1>F.A.Q.</h1>
 		<div v-for="(item, index) in FAQ()" class="faq" :id=index >
 			<h2 class="faq-title">
-				<a href="#" >#</a>
+				<a href="#" class="link">#</a>
 				{{item.title}}
 			</h2>
 			<p class="faq-content">{{item.content}}</p>
@@ -48,6 +48,15 @@
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+.link:hover{
+	text-decoration: none;
+	box-shadow: 0 0 10px #f40552;
+	background-color: #f40552;
+
+}
+.link{
+	padding: 5px;
+}
 *{
 	margin: 0;
 	padding: 0;
@@ -94,12 +103,12 @@ section.module h2{
 	text-align: center;
 	font-weight: 500;
 }
-section.module h2 a{padding: 5px;}
+/* section.module h2 a{padding: 5px;}
 section.module h2 a:hover{
 	text-decoration: none;
 	box-shadow: 0 0 10px #f40552;
 	background-color: #f40552;
-}
+} */
 section.module#faq{
 	padding: 5% 15%;
 	background-color: rgba(0, 0, 0, 0.3);
