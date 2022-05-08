@@ -3,11 +3,10 @@
 	import Nav from "./components/Nav.vue";
 	// import Home from "./components/Home.vue";
 	import { RouterView } from 'vue-router'
-
 </script>
 
 <template>
-	<Header/>
+	<Header id="header"/>
 	<RouterView />
 	<footer>
 		<h3>Copyrights ©2022 Loshido</h3>

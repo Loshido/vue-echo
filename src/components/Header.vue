@@ -7,7 +7,7 @@ import Nav from "./Nav.vue";
 		<h1>
 			<a>Echo</a>
 		</h1>
-		<Nav />
+		<Nav pinner=true />
 	</header>
 </template>
 
@@ -64,6 +64,8 @@ import Nav from "./Nav.vue";
 }
 
 	header{
+    top: 0;
+    z-index: 3;
     position: absolute;
 		padding: 0 10vw;
 

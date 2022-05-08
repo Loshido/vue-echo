@@ -81,6 +81,8 @@ export default{
         height: 60vh;
     }
     div#page{
+        top: 0;
+        /* position: absolute; */
         background-color: #161923;
         background-image: url(../../assets/back.png);
         background-size: 15%;
