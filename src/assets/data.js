@@ -168,4 +168,5 @@ const articles = [
     },
 ]
 
+
 export {FAQ,Features,Texts, articles};
