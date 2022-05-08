@@ -5,6 +5,16 @@ import Typewriter from 'vue-typewriter'
 // import TheWelcome from "./components/TheWelcome.vue";
 </script>
 
+<template>
+  	<header>
+		<h1>
+			<a><VueWriter :array=word :typeSpeed="200" :eraseSpeed="200" :intervals="1000" :caret="underscore"/></a>
+		</h1>
+		<Nav />
+	</header>
+</template>
+
+
 <script>
 	export default{
 		data(){
@@ -14,15 +24,6 @@ import Typewriter from 'vue-typewriter'
 		}
 	}
 </script>
-
-<template>
-  	<header>
-		<h1>
-			<a><VueWriter :array=word :typeSpeed="200" :eraseSpeed="200" :intervals="1000" :caret="underscore"/></a>
-		</h1>
-		<Nav />
-	</header>
-</template>
 
 <style scoped>
 	.is-typed {

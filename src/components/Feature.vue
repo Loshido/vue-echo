@@ -1,15 +1,23 @@
 <script>
 export default {
-    props: ["title","content","rgb","image"]
+    props: ["title","content","rgb","image"],
 }
 </script>
+
 <template>
-    <article :style="{ 'background-color': rgb, border: `3px solid ${rgb}` }">
-        <img v-if="(image)" class="logo" :src=image.src :alt=image.alt />
-        <h1>
-            {{ title }}
-        </h1>
-        <p> {{ content }}</p>
+    <article 
+        :style="{
+            'background-color': rgb,
+            'border': '3px solid '+rgb
+        }">
+        <img 
+            v-if="image"
+            class="logo"
+            :src=image.src
+            alt=image.alt
+        />
+        <h1> {{ title }} </h1>
+        <p> {{ content }} </p>
     </article>
 </template>
 
@@ -25,6 +33,11 @@ export default {
         height: 30vh;
         border-right: none !important;
         border-left: none !important;
+        transition: transform .2s ease-in-out;
+    }
+    article:hover{
+        transform: translate(0,-10px);
+        transition: transform .2s ease-in-out;
     }
     article h1{
         margin: 17px !important;

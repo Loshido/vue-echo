@@ -2,18 +2,6 @@
 import {Texts} from "../assets/data.js";
 </script>
 
-<template>
-    <main>
-        <div id="s1">
-            <p>{{Texts().header}}</p>
-            
-        </div>
-        <div id="s2">
-            <a href="#" @click="moveIt">Shop</a>
-        </div>
-    </main>
-</template>
-
 <script>
 export default {
     methods: {
@@ -30,6 +18,17 @@ export default {
     }
 }
 </script>
+
+<template>
+    <main>
+        <div id="s1">
+            <p v-html="Texts.header"></p>
+        </div>
+        <div id="s2">
+            <a href="#" @click="moveIt">Shop</a>
+        </div>
+    </main>
+</template>
 
 <style scoped>
     main{

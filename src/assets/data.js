@@ -4,6 +4,7 @@ function Features() {
             title: 'VueJS',
             content: "Un approchable, performant et versatile framework pour créer des pages web avec interface utilisateur.",
             rgb: "rgba(108, 147, 128, 0.85)",
+            identifier: "vue",
             image: {
                 src: "https://vuejs.org/images/logo.png",
                 alt: "VueJS"
@@ -13,6 +14,7 @@ function Features() {
             title: 'Javascript',
             content: "JavaScript (JS) est le plus connu language de code pour les pages Web.",
             rgb: "rgba(147, 147, 108, 0.85)",
+            identifier: "js",
             image: {
                 src: "https://www.developpez.net/forums/attachments/p294178d1/a/a/a",
                 alt: "JavaScript"
@@ -22,6 +24,7 @@ function Features() {
             title: 'HTML',
             content: "HTML signifie \"HyperText Markup Language\" qui se traduit par \"language de balises pour l'hypertexte\" ",
             rgb: "rgba(108, 147, 128, 0.85)",
+            identifier: "html",
             image: {
                 src: "https://cdn-icons-png.flaticon.com/512/732/732212.png",
                 alt: "Image"
@@ -31,6 +34,7 @@ function Features() {
             title: 'CSS',
             content: "CSS est l'un des languages principaux du Web, Il sert d'apparence sur les pages Web",
             rgb: "rgba(108, 147, 147,0.85)",
+            identifier: "css",
             image: {
                 src: "https://cdn-icons-png.flaticon.com/512/732/732190.png",
                 alt: "Image"
@@ -65,12 +69,10 @@ function FAQ() {
     ]
 }
 
-function Texts() {
-    return {
-        header: "Bienvenue, cette page est un essaie technique. J'apprends à utiliser VueJS et en effet, il faut commencer par quelque chose sinon on reste bloqué à rien savoir faire. Finalement, cette demo technique sera surement manipulée de pleins de façons différentes pour comprendre le fonctionnement de ce framework.",
-        warning: "Page crée en reprenant initialement celle du site officiel de FiveM, Étant donné que ce site est seulement fait pour apprendre.",
-        nolimits: "Mesurer les progrès de la programmation en lignes de code, c’est comme mesurer les progrès de la construction d’un avion en poids."
-    }
+const Texts = {
+    header: "<strong>Bienvenue</strong>, cette page est un essaie technique. J'apprends à utiliser <a href=\"https://vuejs.org/\">VueJS</a> et en effet, il faut commencer par quelque chose sinon on reste bloqué à rien savoir faire. Finalement, cette demo technique sera surement manipulée de pleins de façons différentes pour comprendre le fonctionnement de ce framework.",
+    warning: "Page crée en reprenant initialement celle du site officiel de <a href=\"https://fivem.net\">FiveM</a>, Étant donné que ce site est seulement fait pour apprendre.",
+    nolimits: "Mesurer les progrès de la programmation en lignes de code, c’est comme mesurer les progrès de la construction d’un avion en poids."
 }
 
 export {FAQ,Features,Texts};

@@ -12,19 +12,31 @@
 			<Header/>
 			<Main />
 		</div>
-		<p id="ut">{{Texts().warning}}</p>
+		<p id="ut">{{Texts.warning}}</p>
 	</section>
 	<section class="module">
 		<h1>Features</h1>
 		<div class="features-holder">
-			<Feature v-for="(item, index) in Features()" :title=item.title :content=item.content :rgb=item.rgb :image=item.image />
+			<Feature 
+				v-for="item in Features()"
+				:title=item.title
+				:content=item.content
+				:rgb=item.rgb
+				:image=item.image 
+			/>
 		</div>
-		<h2>{{Texts().nolimits}}<a href="https://vuejs.org/" target="_blank">VueJS</a></h2>
+		<h2>
+			{{Texts.nolimits}}
+			<a href="https://vuejs.org/" target="_blank">VueJS</a>
+		</h2>
 	</section>
 	<section class="module" id="faq">
 		<h1>F.A.Q.</h1>
 		<div v-for="(item, index) in FAQ()" class="faq" :id=index >
-			<h2 class="faq-title"><a href="#" >#</a>{{item.title}}</h2>
+			<h2 class="faq-title">
+				<a href="#" >#</a>
+				{{item.title}}
+			</h2>
 			<p class="faq-content">{{item.content}}</p>
 		</div>
 	</section>
@@ -106,7 +118,7 @@ section.module#faq .faq-title{
 }
 div.features-holder{
 	width: 100%;
-	height: 30vh;
+	height: 35vh;
 	display: flex;
 	flex-direction: row;
 	justify-content:space-between;
