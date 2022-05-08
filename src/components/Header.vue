@@ -67,6 +67,7 @@ import Typewriter from 'vue-typewriter'
 }
 
 	header{
+    position: absolute;
 		padding: 0 10vw;
 
 		width: 100vw;

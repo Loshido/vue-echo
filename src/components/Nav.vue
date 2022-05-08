@@ -1,19 +1,21 @@
+<script setup>
+import { RouterLink } from 'vue-router'
+</script>
+
 <template>
     <nav>
 		<a href="https://vuejs.org/" target="_blank">VueJS</a>
 		<a href="https://firebase.google.com/" target="_blank">Firebase</a>
-		<!-- <a href="#">truc 3</a> -->
 		<a href="https://github.com/loshido" target="_blank">Github</a>
+		<RouterLink to="/" active-class="active">Home</RouterLink>
+		<RouterLink to="/new" active-class="active">New</RouterLink>
 	</nav>
 </template>
 
-<script>
-    export default {
-        
-    }
-</script>
-
 <style scoped>
+	.active{
+		border-bottom: 3px solid #f40552;
+	}
     nav{
 		transition: all .3s ease-in-out;
 		height: 100%;

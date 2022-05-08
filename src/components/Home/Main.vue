@@ -1,5 +1,5 @@
 <script setup>
-import {Texts} from "../assets/data.js";
+import {Texts} from "../../assets/data.js";
 </script>
 
 <script>
@@ -37,6 +37,7 @@ export default {
         display: flex;
     }
     div{
+        margin-top: 10vh;
         width: 50%;
         height: 100%;
     }
@@ -44,14 +45,6 @@ export default {
         width: 60vw;
         padding: 0 10vw;
         font-size: 30px;
-    }
-    .link:hover{
-        text-decoration: none;
-	    box-shadow: 0 0 10px #f40552;
-        background-color: #f40552;
-    }
-    .link{
-        padding: 5px;
     }
     #s1 p{
         padding: 50px 0;
@@ -70,7 +63,7 @@ export default {
         padding: 25px 75px;
 
         background-color: rgba(244,5,82,0.1);
-        background-image: url(../assets/back.png);
+        background-image: url(../../assets/back.png);
         background-size: 50%;
         animation: anim 80s infinite;
         border: 2px solid #f40552;
