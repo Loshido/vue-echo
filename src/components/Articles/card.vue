@@ -1,11 +1,24 @@
+<script>
+export default{
+    props: ["title","content","image"],
+    methods: {
+        isEmpty(str){
+            return(str.length === 0);
+        }
+    }
+}
+</script>
+
 <template>
     <article>
         <div id="img">
-            <h1>Title</h1>
+            <h1>{{title}}</h1>
+            <img :src=image.src :alt=image.alt>
+            
         </div>
         <div id="content">
             <main>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia tempore temporibus earum eum expedita libero distinctio</p>
+                <p>{{content}}</p>
             </main>
             <a href="#">En savoir plus</a>
         </div>
@@ -18,10 +31,19 @@
         transition: transform .2s ease-out;
     }
     article{
+        max-width: 40vw;
         height: 100%;
         width: 100%;
     }
+    div#img img{
+        z-index: 1;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
     div#img{
+        position: relative;
         height: 55%;
         background-color: #fff;
         margin: 5%;
@@ -31,14 +53,17 @@
         justify-content: flex-end;
     }
     h1{
+        z-index: 2;
+        position: absolute;
         margin: 0.5em;
         font-size: 1.6em;
-        position: fixed;
-        color: black;
+        /* position: fixed; */
+        color: #f40552;
         float: left;
     }
     div#content p{
         font-size: 1.2em;
+        padding-top: 3%;
     }
     div#content{
         background-color: rgba(254, 254, 225, 0.2);
@@ -46,6 +71,7 @@
         margin: 5%;
         margin-top: 0;
         padding: 5%;
+        padding-top: 0;
         transition: transform .2s ease-in;
 
         display: flex;

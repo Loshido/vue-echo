@@ -8,7 +8,7 @@ import { RouterLink } from 'vue-router'
 		<a href="https://firebase.google.com/" target="_blank">Firebase</a>
 		<a href="https://github.com/loshido" target="_blank">Github</a>
 		<RouterLink to="/" active-class="active">Home</RouterLink>
-		<RouterLink to="/new" active-class="active">New</RouterLink>
+		<RouterLink to="/shop" active-class="active">Articles</RouterLink>
 	</nav>
 </template>
 

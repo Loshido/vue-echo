@@ -11,8 +11,8 @@ const router = createRouter({
         component: Home
       },
       {
-        path: '/new',
-        name: 'new',
+        path: '/shop',
+        name: 'shop',
         component: Page
       }
     ]

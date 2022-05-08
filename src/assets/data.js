@@ -75,4 +75,97 @@ const Texts = {
     nolimits: "Mesurer les progrès de la programmation en lignes de code, c’est comme mesurer les progrès de la construction d’un avion en poids."
 }
 
-export {FAQ,Features,Texts};
+import encryption from "./holder/encryption.svg"
+import finishline from "./holder/finishline.svg"
+import inspiration from "./holder/inspiration.svg"
+import investing from "./holder/investing.svg"
+import moving from "./holder/moving.svg"
+import relax from "./holder/relax.svg"
+import sheet from "./holder/sheet.svg"
+import videographer from "./holder/videographer.svg"
+import warning from "./holder/warning.svg"
+import working from "./holder/working.svg"
+const articles = [
+    {
+        title: "Encryption",
+        content: "Encryption Text",
+        image: {
+            src: encryption,
+            alt: "encryption"
+        }
+    },
+    {
+        title: "FinishLine",
+        content: "Finish Line Text",
+        image: {
+            src: finishline,
+            alt: "finishline"
+        }
+    },
+    {
+        title: "Inspiration",
+        content: "Inspiration Text",
+        image: {
+            src: inspiration,
+            alt: "inspiration"
+        }
+    },
+    {
+        title: "investing",
+        content: "investing Text",
+        image: {
+            src: investing,
+            alt: "investing"
+        }
+    },
+    {
+        title: "moving",
+        content: "moving Text",
+        image: {
+            src: moving,
+            alt: "moving"
+        }
+    },
+    {
+        title: "relax",
+        content: "relax Text",
+        image: {
+            src: relax,
+            alt: "relax"
+        }
+    },
+    {
+        title: "sheet",
+        content: "sheet Text",
+        image: {
+            src: sheet,
+            alt: "sheet"
+        }
+    },
+    {
+        title: "videographer",
+        content: "videographer Text",
+        image: {
+            src: videographer,
+            alt: "videographer"
+        }
+    },
+    {
+        title: "warning",
+        content: "warning Text",
+        image: {
+            src: warning,
+            alt: "warning"
+        }
+    },
+    {
+        title: "working",
+        content: "working Text",
+        image: {
+            src: working,
+            alt: "working"
+        }
+    },
+]
+
+export {FAQ,Features,Texts, articles};

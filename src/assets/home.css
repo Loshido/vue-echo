@@ -88,6 +88,7 @@ div.features-holder{
 }
 
 footer{
+	position: static;
 	margin: 25px 10vw;
 	display: flex;
 	flex-direction: row;

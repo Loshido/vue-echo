@@ -1,22 +1,6 @@
 <script setup>
 import {Texts} from "../../assets/data.js";
-</script>
-
-<script>
-export default {
-    methods: {
-        rd(x){
-            var random = Math.floor(Math.random() * x + 1)
-            if(Math.floor(Math.random()*2) +1 == 1) {
-                random = -random;
-            }
-            return random;
-        },
-        moveIt(){
-            document.querySelector("div#s2 a").style.transform = `translate(${this.rd(150)}px, ${this.rd(200)}px)`;
-        }
-    }
-}
+import { RouterLink } from 'vue-router'
 </script>
 
 <template>
@@ -25,7 +9,7 @@ export default {
             <p v-html="Texts.header"></p>
         </div>
         <div id="s2">
-            <a href="#" @click="moveIt">Shop</a>
+            <RouterLink to="/shop">Shop</RouterLink>
         </div>
     </main>
 </template>
