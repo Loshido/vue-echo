@@ -1,6 +1,6 @@
 <script>
-import { useStore } from '@/stores/index'
-import { RouterLink } from 'vue-router'
+import { useStore } from '@/utilities/stores'
+// import { RouterLink } from 'vue-router'
 
 export default{
     setup() {
@@ -23,7 +23,10 @@ export default{
             <main>
                 <p>{{item.content}}</p>
             </main>
-            <RouterLink :to=item.path @click="store.clicked(item.image.alt)">En savoir plus</RouterLink>
+            <RouterLink 
+                :to=item.path
+                @click="store.clicked(item.image.alt)"
+            >En savoir plus</RouterLink>
         </div>
     </article>
 </template>

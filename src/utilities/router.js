@@ -15,13 +15,12 @@ const router = createRouter({
         path: '/shop',
         name: 'shop',
         component: Page,
-        children: [
-          {
-            path: ':article',
-            component: Article
-          }
-        ]
       },
+      {
+        path: '/shop/:article',
+        name: 'article',
+        component: Article
+      }
     ]
   })
   

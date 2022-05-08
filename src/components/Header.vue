@@ -1,7 +1,5 @@
 <script setup>
 import Nav from "./Nav.vue";
-
-// import TheWelcome from "./components/TheWelcome.vue";
 </script>
 
 <template>
