@@ -42,9 +42,8 @@ export default{
             <div class="row">
                 <card 
                     v-for="(i,j) in item" 
-                    :title="i.title" 
-                    :content="i.content" 
-                    :image="i.image" />
+                    :item="i"
+                />
             </div>
         </div>
     </div>

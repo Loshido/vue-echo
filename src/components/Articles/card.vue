@@ -1,26 +1,29 @@
 <script>
+import { useStore } from '@/stores/index'
+import { RouterLink } from 'vue-router'
+
 export default{
-    props: ["title","content","image"],
-    methods: {
-        isEmpty(str){
-            return(str.length === 0);
+    setup() {
+        const store = useStore()
+        return {
+            store,
         }
-    }
+    },
+    props: ["item"]
 }
 </script>
 
 <template>
     <article>
         <div id="img">
-            <h1>{{title}}</h1>
-            <img :src=image.src :alt=image.alt>
-            
+            <h1>{{item.title}}</h1>
+            <img :src="item.image.src" :alt="item.image.alt">
         </div>
         <div id="content">
             <main>
-                <p>{{content}}</p>
+                <p>{{item.content}}</p>
             </main>
-            <a href="#">En savoir plus</a>
+            <RouterLink :to=item.path @click="store.clicked(item.image.alt)">En savoir plus</RouterLink>
         </div>
     </article>
 </template>

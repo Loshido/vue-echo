@@ -89,6 +89,7 @@ const articles = [
     {
         title: "Encryption",
         content: "Encryption Text",
+        path: "/shop/encryption",
         image: {
             src: encryption,
             alt: "encryption"
@@ -97,6 +98,7 @@ const articles = [
     {
         title: "FinishLine",
         content: "Finish Line Text",
+        path: "/shop/finishline",
         image: {
             src: finishline,
             alt: "finishline"
@@ -105,6 +107,7 @@ const articles = [
     {
         title: "Inspiration",
         content: "Inspiration Text",
+        path: "/shop/inspiration",
         image: {
             src: inspiration,
             alt: "inspiration"
@@ -113,6 +116,7 @@ const articles = [
     {
         title: "investing",
         content: "investing Text",
+        path: "/shop/investing",
         image: {
             src: investing,
             alt: "investing"
@@ -121,6 +125,7 @@ const articles = [
     {
         title: "moving",
         content: "moving Text",
+        path: "/shop/moving",
         image: {
             src: moving,
             alt: "moving"
@@ -129,6 +134,7 @@ const articles = [
     {
         title: "relax",
         content: "relax Text",
+        path: "/shop/relax",
         image: {
             src: relax,
             alt: "relax"
@@ -137,6 +143,7 @@ const articles = [
     {
         title: "sheet",
         content: "sheet Text",
+        path: "/shop/sheet",
         image: {
             src: sheet,
             alt: "sheet"
@@ -145,6 +152,7 @@ const articles = [
     {
         title: "videographer",
         content: "videographer Text",
+        path: "/shop/videographer",
         image: {
             src: videographer,
             alt: "videographer"
@@ -153,6 +161,7 @@ const articles = [
     {
         title: "warning",
         content: "warning Text",
+        path: "/shop/warning",
         image: {
             src: warning,
             alt: "warning"
@@ -161,12 +170,21 @@ const articles = [
     {
         title: "working",
         content: "working Text",
+        path: "/shop/working",
         image: {
             src: working,
             alt: "working"
         }
     },
 ]
+function getArticle(item) {
+    for(k in articles) {
+        for(i in item){
+            if(k == i){
+                return articles[k];
+            }
+        }
+    }
+}
 
-
-export {FAQ,Features,Texts, articles};
+export {FAQ,Features,Texts, articles,getArticle};
