@@ -7,20 +7,9 @@ import Nav from "./Nav.vue";
 		<h1>
 			<a>Echo</a>
 		</h1>
-		<Nav pinner=true />
+		<Nav />
 	</header>
 </template>
-
-
-<script>
-	export default{
-		data(){
-			return {
-				word: ["Echo","echo"]
-			}
-		}
-	}
-</script>
 
 <style scoped>
 	.is-typed {

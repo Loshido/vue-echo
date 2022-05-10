@@ -11,11 +11,11 @@ import { RouterLink } from 'vue-router'
 		<a href="https://github.com/loshido" target="_blank">Github</a>
 		<RouterLink to="/" active-class="active">Home</RouterLink>
 		<RouterLink to="/shop" active-class="active">Articles</RouterLink>
-		<a v-if="pinner" id="pin" @click="TogglePin"><p>📌</p></a>
+		<!-- <a v-if="pinner" id="pin" @click="TogglePin"><p>📌</p></a> -->
 	</nav>
 </template>
 
-<script>
+<!-- <script>
 export default{
 	props: ["pinner"],
 	data(){
@@ -29,21 +29,23 @@ export default{
 			console.log(this.isPinned)
 			const node = document.querySelector("#pin p")
 			const header = document.querySelector("#header")
+			const head = document.querySelector("#head")
 			console.log(header)
 			if(this.isPinned){
 				node.style.transform = "rotateZ(50deg)";
+				head.style.transform = "translateY(-10vh)";
 				header.style.position = "sticky";
 				header.style["background-color"] = "rgba(0, 0, 0, 0.40)";
-				header.style.top = "0";
 			} else {
 				header.style["background-color"] = "rgba(0, 0, 0, 0.15)";
 				node.style.transform = "none";
 				header.style.position = "absolute";
+				head.style.transform = "none";
 			}
 		}
 	}
 }
-</script>
+</script> -->
 
 <style scoped>
 	#pin:hover{
