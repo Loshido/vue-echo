@@ -71,8 +71,8 @@ function FAQ() {
 
 const Texts = {
     header: "<strong>Bienvenue</strong>, cette page est un essai technique. J'apprends à utiliser <a class=\"link\" target=\"_blank\" href=\"https://vuejs.org/\">VueJS</a> et en effet, il faut commencer par quelque chose sinon on reste bloqué à rien savoir faire. Finalement, cette demo technique sera surement manipulée de pleins de façons différentes pour comprendre le fonctionnement de ce framework.",
-    warning: "Page crée en reprenant initialement celle du site officiel de <a class=\"link\" href=\"https://fivem.net\">FiveM</a>, Étant donné que ce site est seulement fait pour apprendre.",
-    nolimits: "Mesurer les progrès de la programmation en lignes de code, c’est comme mesurer les progrès de la construction d’un avion en poids."
+    warning: "Page inspirée initialement du site officiel de <a class=\"link\" href=\"https://fivem.net\">FiveM</a>, Étant donné que ma page est seulement faite pour apprendre.",
+    nolimits: "<i><q>Mesurer les progrès de la programmation en lignes de code, c’est comme mesurer les progrès de la construction d’un avion en poids.</q></i>"
 }
 
 import encryption from "./holder/encryption.svg"

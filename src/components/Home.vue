@@ -11,19 +11,17 @@
 		<p id="ut" v-html="Texts.warning"></p>
 	</section>
 	<section class="module">
-		<h1>Features</h1>
+		<h1 id="features-title">Features</h1>
 		<div class="features-holder">
 			<Feature 
 				v-for="item in Features()"
-				:title=item.title
-				:content=item.content
-				:rgb=item.rgb
-				:image=item.image 
+				:title="item.title"
+				:content="item.content"
+				:rgb="item.rgb"
+				:image="item.image"
 			/>
 		</div>
-		<h2>
-			{{Texts.nolimits}}
-			<a class="link" href="https://vuejs.org/" target="_blank">VueJS</a>
+		<h2 v-html="Texts.nolimits">
 		</h2>
 	</section>
 	<section class="module" id="faq">

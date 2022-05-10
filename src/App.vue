@@ -19,8 +19,8 @@
 .link:hover{
 	text-decoration: none;
 	box-shadow: 0 0 10px #f40552;
+	
 	background-color: #f40552;
-
 }
 .link{
 	padding: 5px;
@@ -28,7 +28,10 @@
 *{
 	margin: 0;
 	padding: 0;
+
 	box-sizing: border-box;
+	scroll-behavior: smooth;
+
 	font-family: 'Rubik', sans-serif;
 	color: #fff;
 }
@@ -60,7 +63,11 @@ p#ut{
 	transform: translateY(-25px);
 }
 section.module{
-	padding: 5% 15% 0 15%;
+	padding: 2em 5em 0 5em;
+}
+section.module h1#features-title{
+	font-size: 2.5em;
+	padding-left: 4em;
 }
 section.module h1{
 	margin: 25px 0;
@@ -68,9 +75,18 @@ section.module h1{
 	font-size: 36px;
 }
 section.module h2{
-	margin: 50px;
+	margin: 50px 0;
 	text-align: center;
+	font-size: 1.4em;
 	font-weight: 500;
+}
+div.features-holder{
+	width: 100%;
+	height: 35vh;
+	display: flex;
+	flex-direction: row;
+	justify-content:space-around;
+	align-items: center;
 }
 section.module#faq{
 	padding: 5% 15%;
@@ -88,14 +104,7 @@ section.module#faq .faq-title{
 	text-align: unset;
 	margin: 10px;
 }
-div.features-holder{
-	width: 100%;
-	height: 35vh;
-	display: flex;
-	flex-direction: row;
-	justify-content:space-between;
-	align-items: center;
-}
+
 
 footer{
 	/* position: static; */
