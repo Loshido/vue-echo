@@ -107,7 +107,6 @@ section.module#faq .faq-title{
 
 
 footer{
-	/* position: static; */
 	margin: 25px 10vw;
 	display: flex;
 	flex-direction: row;

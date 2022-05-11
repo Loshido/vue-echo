@@ -10,7 +10,7 @@ import { RouterLink } from 'vue-router'
 		<a href="https://firebase.google.com/" target="_blank">Firebase</a>
 		<a href="https://github.com/loshido" target="_blank">Github</a>
 		<RouterLink to="/" active-class="active">Home</RouterLink>
-		<RouterLink to="/shop" active-class="active">Articles</RouterLink>
+		<RouterLink to="/shop" active-class="active">Scripts</RouterLink>
 		<RouterLink id="user" to="/login">t</RouterLink>
 	</nav>
 </template>

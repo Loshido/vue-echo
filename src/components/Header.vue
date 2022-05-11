@@ -73,6 +73,7 @@ import Nav from "./Nav.vue";
 	}
 	h1{
 		font-size: 64px;
+    font-weight: 100;
 
 		text-decoration: none;
 		

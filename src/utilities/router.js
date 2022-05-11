@@ -20,7 +20,8 @@ const router = createRouter({
       {
         path: '/shop/:article',
         name: 'article',
-        component: Article
+        component: Article,
+        props: true
       },
       {
         path: '/login',
