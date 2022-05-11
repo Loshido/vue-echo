@@ -5,6 +5,11 @@
 
 <script>
 export default{
+    data(){
+        return {
+            isLogged: false
+        }
+    },
     methods: {
         getRows(){
             if (articles.length == 0){
@@ -57,9 +62,9 @@ export default{
         height: 85vh;
         text-align: center;
     }
-    .container:first-child{
+    /* .container:first-child{
         padding-top: 10vh;
-    }
+    } */
     .container{
         margin: 0 10vw 0 10vw;
         width: 80vw;

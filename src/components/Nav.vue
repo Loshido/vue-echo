@@ -11,10 +11,16 @@ import { RouterLink } from 'vue-router'
 		<a href="https://github.com/loshido" target="_blank">Github</a>
 		<RouterLink to="/" active-class="active">Home</RouterLink>
 		<RouterLink to="/shop" active-class="active">Articles</RouterLink>
+		<RouterLink id="user" to="/login">t</RouterLink>
 	</nav>
 </template>
 
 <style scoped>
+	nav a#user{
+		height: 65px;
+		width: 65px;
+		border-radius: 100%;
+	}
 	#pin:hover{
 		background-color: rgba(254, 254, 225, 0.5);
 		transition: background-color .2s ease-in-out;

@@ -3,7 +3,7 @@ import Nav from "./Nav.vue";
 </script>
 
 <template>
-  	<header>
+  <header>
 		<h1>
 			<a>Echo</a>
 		</h1>
@@ -61,7 +61,8 @@ import Nav from "./Nav.vue";
 		width: 100vw;
 		height: 10vh;
 
-		background-color: rgba(0, 0, 0, 0.15);
+		/* background-color: rgba(0, 0, 0, 0.15); */
+		background-color: rgba(0, 0, 0, 0.3);
 
 		display: flex;
     

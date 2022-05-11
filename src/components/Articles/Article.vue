@@ -1,6 +1,15 @@
-<script>
+<script setup>
 import { useStore } from '@/utilities/stores'
 import router from '@/utilities/router'
+
+</script>
+<template>
+    <div>
+        <h1 class="lol" v-html="store.article"></h1>
+    </div>
+</template>
+
+<script>
 export default{
     setup() {
         const store = useStore()
@@ -13,13 +22,6 @@ export default{
     },
 }
 </script>
-<template>
-    <div>
-        <h1 class="lol" v-html="store.article"></h1>
-    </div>
-</template>
-
-
 
 <style scoped>
     div{
