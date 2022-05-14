@@ -11,11 +11,12 @@ import { RouterLink } from 'vue-router'
 		<a href="https://github.com/loshido" target="_blank">Github</a>
 		<RouterLink to="/" active-class="active">Home</RouterLink>
 		<RouterLink to="/shop" active-class="active">Scripts</RouterLink>
-		<RouterLink id="user" to="/login">t</RouterLink>
+		<RouterLink id="user" to="/life"></RouterLink>
 	</nav>
 </template>
 
 <style scoped>
+
 	nav a#user{
 		height: 65px;
 		width: 65px;

@@ -2,8 +2,8 @@ import {createRouter, createWebHistory} from "vue-router";
 import Home from "../components/Home.vue";
 import Page from "../components/Articles/Page.vue";
 import Article from "../components/Articles/Article.vue";
-import login from "../components/login/login.vue";
-import signin from "../components/login/signin.vue";
+import Life from "../components/Life.vue";
+
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
@@ -24,14 +24,9 @@ const router = createRouter({
         props: true
       },
       {
-        path: '/login',
-        name: 'login',
-        component: login
-      },
-      {
-        path: '/signin',
-        name: 'signin',
-        component: signin
+        path: '/life',
+        name: 'life',
+        component: Life
       }
     ]
   })

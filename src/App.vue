@@ -117,4 +117,11 @@ footer h3{
 	font-weight: 300;
 	color: rgb(151, 151, 151);
 }
+@keyframes clicked {
+    0% {background-color: #f40552;}
+    25% {background-color: #C10A47;}
+    50% {background-color: #850F3B;}
+    75% {background-color: #4E142F;}
+    100% {background-color: #161923;}
+}
 </style>
