@@ -3,7 +3,7 @@ import Nav from "./Nav.vue";
 </script>
 
 <template>
-  <header>
+  	<header>
 		<h1>
 			<a>Echo</a>
 		</h1>
@@ -12,44 +12,44 @@ import Nav from "./Nav.vue";
 </template>
 
 <style scoped>
-	.is-typed {
-  font-family: "Monaco";
+.is-typed {
+  	font-family: "Monaco";
 }
 
 .is-typed span.typed {
-  color: black;
+  	color: black;
 }
 
 .is-typed span.cursor {
-  display: inline-block;
-  width: 3px;
-  background-color: black;
-  animation: blink 1s infinite;
+  	display: inline-block;
+  	width: 3px;
+  	background-color: black;
+  	animation: blink 1s infinite;
 }
 
 .is-typed span.underscore {
-  display: inline-flex;
-  width: 10px;
-  height: 1px;
-  align-items:flex-end;
-  background-color: black;
-  animation: blink 1s infinite;
+  	display: inline-flex;
+  	width: 10px;
+  	height: 1px;
+  	align-items:flex-end;
+  	background-color: black;
+  	animation: blink 1s infinite;
 }
 
 .is-typed span.cursor.typing {
-  animation: none;
+  	animation: none;
 }
 
 @keyframes blink {
-  49% {
-    background-color: black;
-  }
-  50% {
-    background-color: transparent;
-  }
-  99% {
-    background-color: transparent;
-  }
+  	49% {
+  	  	background-color: black;
+  	}
+  	50% {
+  	  	background-color: transparent;
+  	}
+  	99% {
+    	background-color: transparent;
+  	}
 }
 
 	header{
@@ -73,7 +73,7 @@ import Nav from "./Nav.vue";
 	}
 	h1{
 		font-size: 64px;
-    font-weight: 100;
+    	font-weight: 100;
 
 		text-decoration: none;
 		
@@ -90,4 +90,13 @@ import Nav from "./Nav.vue";
             background-position: 1000px -1000px;
         }
     }
+@media (max-width: 1000px){
+	header{
+		justify-content: center; 
+		height: 15vh;
+	}
+	header h1{
+		display: none;
+	}
+}
 </style>

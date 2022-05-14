@@ -22,6 +22,24 @@ export default{
 </template>
 
 <style scoped>
+    @media (max-width:1000px) {
+        article{
+            height: 50% !important;
+        }
+        article div a{
+            font-size: .9rem !important;
+            text-align: center;
+            text-decoration: none;
+
+            padding: 5% !important;
+            background-color: rgba(244,5,82,0.1);
+            background-image: url(../../assets/back.png);
+            background-size: 50%;
+            border: 2px solid #f40552;
+
+            transition: background-color .1s ease-out;
+        }
+    }
     article:hover{
         transform: scale(1.025);
         transition: transform .2s ease-out;

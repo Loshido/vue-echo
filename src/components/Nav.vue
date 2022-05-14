@@ -56,4 +56,10 @@ import { RouterLink } from 'vue-router'
 		background-color: #f40552;
 		transition: background-color .2s ease-in-out;
 	}
+	@media (max-width: 1000px){
+		nav{
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
 </style>

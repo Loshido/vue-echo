@@ -35,6 +35,45 @@
 	font-family: 'Rubik', sans-serif;
 	color: #fff;
 }
+@media (max-width: 1300px) {
+	section#head{
+		background-image: none !important;
+		height: max-content !important;
+	}
+	#container{
+		background-image: none !important;
+		height: max-content !important;
+	}
+	p#ut{
+		width: unset !important;
+		padding: 0 5%;
+		margin: 0 !important;
+		text-align: center !important;
+		transform: none;
+	}
+	section.module h1#features-title{
+		font-size: 2.5rem;
+		padding: 0 !important;
+		text-align: center;
+	}
+	div.features-holder{
+		width: 100vw !important;
+		height: max-content !important;
+		display: flex;
+		flex-direction:column !important;
+		justify-content:space-around;
+		align-items: center;
+	}
+	section.module{
+		padding: unset !important;
+	}
+	section.module h2{
+		padding: 0 5%;
+	}
+	section.module#faq h1{
+		padding: 5%;
+	}
+}
 section#head{
 	top: 0;
 	width: 100%;
@@ -116,6 +155,19 @@ footer{
 footer h3{
 	font-weight: 300;
 	color: rgb(151, 151, 151);
+}
+
+@media (max-width: 800px) {
+
+	footer{
+		flex-direction: column;
+	}
+	footer nav {
+		display: none !important;
+	}
+	footer h3{
+		margin: 1rem;
+	}
 }
 @keyframes clicked {
     0% {background-color: #f40552;}

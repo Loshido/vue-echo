@@ -6,7 +6,7 @@
     <h3 v-if="time=='me'">Chacun de ces cubes représentent une semaine de ma vie</h3>
     <h3 v-else-if="time.length > 12">Vous avez saisis {{getNewDate(time)}}</h3>
     <h3 v-else-if="input!=''">Vous avez saisis {{getNewDate(input)}}</h3>
-    <aside>
+    <div id="aside">
         <form>
             <label>
                 Saissisez votre date de naissance.<br><hr>
@@ -17,7 +17,7 @@
                 />
             </label>
         </form>
-    </aside>
+    </div>
     <div id="tab">
         <div class="week" v-for="week in weeks" :key="week" @mouseover="CubeClicked(week)" :id="week+'cube'">
             <span class="tooltip">{{toExposed(current,week)}}</span>
@@ -111,7 +111,7 @@ import { toNumber } from "@vue/shared"
         max-width: 85%;
         width: 85%;
     }
-    aside{
+    div#aside{
         position: fixed;
         margin: 0 2.5vw;
         padding: 1.5vh .5vw;
@@ -121,8 +121,42 @@ import { toNumber } from "@vue/shared"
         max-width: 15vw;
     }
 
-    h3{text-align: center;margin: 25px;}
-    h2{margin: 5vh 15vw;margin-top: 15vh;}
+    h3{
+        text-align: center;
+        margin: 25px;
+        }
+    h2{
+        margin: 5vh 15vw;
+        margin-top: 15vh;
+    }
+    @media (max-width: 1000px) {
+        h2{
+            margin: 18vh 0 0 0;
+            text-align: center;
+            font-size: .9rem;
+        }
+        h3{
+            font-size: .9rem;
+        }
+        div#aside{
+            max-width: none;
+            width: 80vw;
+            margin: 3vh 10vw;
+            position: static;
+            /* width: max-content; */
+        }
+        div#aside form{
+            text-align: center;
+        }
+        div#tab{
+            margin: 1vh 5vw !important;
+            width: 90vw !important;
+        }
+        div.week .tooltip{
+            margin: -50px 0 0 -50px !important;
+        }
+    }
+
     div.week:hover .tooltip{visibility: visible;}
     span#weeks{text-decoration: underline;}
     div#tab{

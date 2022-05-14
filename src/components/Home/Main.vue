@@ -15,6 +15,34 @@ import { RouterLink } from 'vue-router'
 </template>
 
 <style scoped>
+    @media (max-width: 1300px) {
+        main{
+            /* flex-direction: column; */
+            height: max-content !important;
+        }
+        #s1{
+            width: 100% !important;
+            padding: 0 5% !important;
+        }
+        #s2{
+            margin: 15% 5%;
+            display:initial !important;
+
+            height: 50% !important;
+        }
+    }
+    @media (max-width: 800px) {
+        main{
+            flex-direction: column;
+        }
+        #s1{
+            margin-top: 15vh;
+            text-align: center;
+        }
+        #s2{
+            display: none !important;
+        }
+    }
     main{
         width: 100%;
         height: 60vh;

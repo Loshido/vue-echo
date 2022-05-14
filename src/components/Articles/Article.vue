@@ -19,6 +19,7 @@
 
 <script>
 export default{
+    props: ["article"],
     data(){
         return {
             page: {}
@@ -31,6 +32,28 @@ export default{
 </script>
 
 <style scoped>
+    @media (max-width: 500px) {
+        h1#retour{
+            text-align: left;
+            margin: 18vh 0 0 7vw !important;
+            padding: 0 !important;
+            font-size: 2rem !important;
+        }
+        div#article-container{
+            flex-direction: column;
+            width: 80vw !important;
+            margin: 5vh 10vw !important;
+        }
+        div#article-container #article-img{
+            margin: 10% !important;
+        }
+        div#article-container #article-img img{
+            max-width: 100% !important;
+            max-height: unset !important;
+            width: 80vw !important;
+            height: unset !important;
+        }
+    }
     div#article-container{
         background-color: #161923;
         box-shadow: 0 0 100px rgba(255, 255, 255,0.2);

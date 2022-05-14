@@ -13,8 +13,8 @@ export default {
         <img 
             v-if="image"
             class="logo"
-            :src=image.src
-            alt=image.alt
+            :src="image.src"
+            :alt="image.alt"
         />
         <h1> {{ title }} </h1>
         <p> {{ content }} </p>
@@ -47,5 +47,12 @@ export default {
         margin: 10px;
         margin-top: 20px;
         font-size: 24px;
+    }
+    @media (max-width: 1300px) {
+        article{
+            width: 60vw !important;
+            margin: 3vh 0;
+            height: max-content !important;
+        }
     }
 </style>
