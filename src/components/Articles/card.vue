@@ -1,14 +1,7 @@
 <script>
-import { useStore } from '@/utilities/stores'
 // import { RouterLink } from 'vue-router'
 
 export default{
-    setup() {
-        const store = useStore()
-        return {
-            store,
-        }
-    },
     props: ["item"]
 }
 </script>
@@ -23,10 +16,7 @@ export default{
             <main>
                 <p>{{item.content}}</p>
             </main>
-            <RouterLink 
-                :to=item.path
-                @click="store.clicked(item.image.alt)"
-            >En savoir plus</RouterLink>
+            <RouterLink :to="item.path">En savoir plus</RouterLink>
         </div>
     </article>
 </template>
@@ -46,7 +36,7 @@ export default{
         position: absolute;
         height: 100%;
         width: 100%;
-        object-fit: cover;
+        object-fit: scale-down;
     }
     div#img{
         position: relative;

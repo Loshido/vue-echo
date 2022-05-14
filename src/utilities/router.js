@@ -2,7 +2,7 @@ import {createRouter, createWebHistory} from "vue-router";
 import Home from "../components/Home.vue";
 import Page from "../components/Articles/Page.vue";
 import Article from "../components/Articles/Article.vue";
-import Life from "../components/Life.vue";
+import Life from "../components/Life/Life.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -24,9 +24,10 @@ const router = createRouter({
         props: true
       },
       {
-        path: '/life',
+        path: '/life/:time',
+        props: true,
         name: 'life',
-        component: Life
+        component: Life,
       }
     ]
   })

@@ -88,6 +88,7 @@ import working from "./holder/working.svg"
 const articles = [
     {
         title: "Encryption",
+        key: 'encryption',
         content: "Encryption Text",
         path: "/shop/encryption",
         image: {
@@ -98,6 +99,7 @@ const articles = [
     {
         title: "FinishLine",
         content: "Finish Line Text",
+        key: 'finishline',
         path: "/shop/finishline",
         image: {
             src: finishline,
@@ -107,6 +109,7 @@ const articles = [
     {
         title: "Inspiration",
         content: "Inspiration Text",
+        key: 'inspiration',
         path: "/shop/inspiration",
         image: {
             src: inspiration,
@@ -116,6 +119,7 @@ const articles = [
     {
         title: "investing",
         content: "investing Text",
+        key: 'investing',
         path: "/shop/investing",
         image: {
             src: investing,
@@ -125,6 +129,7 @@ const articles = [
     {
         title: "moving",
         content: "moving Text",
+        key: 'moving',
         path: "/shop/moving",
         image: {
             src: moving,
@@ -134,6 +139,7 @@ const articles = [
     {
         title: "relax",
         content: "relax Text",
+        key: 'relax',
         path: "/shop/relax",
         image: {
             src: relax,
@@ -143,6 +149,7 @@ const articles = [
     {
         title: "sheet",
         content: "sheet Text",
+        key: 'sheet',
         path: "/shop/sheet",
         image: {
             src: sheet,
@@ -152,6 +159,7 @@ const articles = [
     {
         title: "videographer",
         content: "videographer Text",
+        key: 'videographer',
         path: "/shop/videographer",
         image: {
             src: videographer,
@@ -161,6 +169,7 @@ const articles = [
     {
         title: "warning",
         content: "warning Text",
+        key: 'warning',
         path: "/shop/warning",
         image: {
             src: warning,
@@ -170,6 +179,7 @@ const articles = [
     {
         title: "working",
         content: "working Text",
+        key: 'working',
         path: "/shop/working",
         image: {
             src: working,
@@ -178,10 +188,10 @@ const articles = [
     },
 ]
 function getArticle(item) {
-    for(k in articles) {
-        for(i in item){
-            if(k == i){
-                return articles[k];
+    for(var i = 0; i < articles.length; i++){
+        for(var k in articles[i]){
+            if (typeof(articles[i][k])=="string"  && articles[i][k] == item){
+                return articles[i];
             }
         }
     }

@@ -11,7 +11,7 @@ import { RouterLink } from 'vue-router'
 		<a href="https://github.com/loshido" target="_blank">Github</a>
 		<RouterLink to="/" active-class="active">Home</RouterLink>
 		<RouterLink to="/shop" active-class="active">Scripts</RouterLink>
-		<RouterLink id="user" to="/life"></RouterLink>
+		<RouterLink active-class="active" to="/life/me">Life</RouterLink>
 	</nav>
 </template>
 
