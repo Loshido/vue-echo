@@ -43,6 +43,16 @@
 </script>
     
 <style>
+    @media (max-width:1000px) {
+        div#box{
+            margin: 3vh 5vw !important;
+            min-height: 50vh !important;
+            width: 90vw !important;
+        }
+        div#box h2{
+            font-size: 2rem !important;
+        }
+    }
     div#box{
         background: rgba(255, 255, 255, 0.24);
         border-radius: 16px;
@@ -109,7 +119,7 @@
         background-color: rgba(244,5,82,0.1);
         background-image: url(../../assets/back.png);
         background-size: 90%;
-        animation: anim 80s infinite;
+        animation: anim 60s infinite;
         border: 2px solid #f40552;
         backdrop-filter: blur(5px);
         transition: background-color .3s ease-in-out;

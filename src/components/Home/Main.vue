@@ -32,6 +32,9 @@ import { RouterLink } from 'vue-router'
         }
     }
     @media (max-width: 800px) {
+        div{
+            margin-top: 0 !important;
+        }
         main{
             flex-direction: column;
         }

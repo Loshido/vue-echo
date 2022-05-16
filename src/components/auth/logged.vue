@@ -7,7 +7,7 @@ import { RouterLink } from 'vue-router'
     <hr>
     <form @submit.prevent="sendAvatar">
         <h3>Déposer une photo de profil</h3>
-        <input type="url" id="avatar" v-model="photo" placeholder="Avatar">
+        <input type="url" id="avatar" v-model="photo" placeholder="Avatar URL">
         <button type="submit">Envoyer</button>
     </form>
 </template>

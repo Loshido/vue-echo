@@ -93,8 +93,12 @@ import Nav from "./Nav.vue";
     }
 @media (max-width: 1000px){
 	header{
+		position: initial;
 		justify-content: center; 
-		height: 15vh;
+		min-height: 15vh;
+		height: 25vh;
+		max-height: 30vh;
+		/* height: 15vh; */
 	}
 	header h1{
 		display: none;

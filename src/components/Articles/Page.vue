@@ -57,7 +57,7 @@ export default{
 <style scoped>
     @media (max-width: 1000px) {
         .container:first-child{
-            margin-top: 20vh;
+            margin-top: 0;
         }
         div.row{
             flex-wrap: wrap !important;
