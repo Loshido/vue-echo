@@ -11,6 +11,7 @@ import Nav from "./Nav.vue";
 	</header>
 </template>
 
+
 <style scoped>
 .is-typed {
   	font-family: "Monaco";

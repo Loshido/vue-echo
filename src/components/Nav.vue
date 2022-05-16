@@ -12,12 +12,46 @@ import { RouterLink } from 'vue-router'
 		<RouterLink to="/" active-class="active">Home</RouterLink>
 		<RouterLink to="/shop" active-class="active">Scripts</RouterLink>
 		<RouterLink active-class="active" to="/life/me">Life</RouterLink>
+		<RouterLink to="/auth" id="user"  active-class="active-user"><img :src="avatar" alt="Profil Picture"></RouterLink>
 	</nav>
 </template>
 
-<style scoped>
+<script>
+	import userAvatar from '../assets/user.png'
+	import { getAuth, onAuthStateChanged   } from "firebase/auth";
+	export default{
+		data(){
+			return{
+				avatar: userAvatar,
+				isLogged: false
+			}
+		},
+		beforeMount(){
+            const auth = getAuth();
+            onAuthStateChanged(auth, (user) => {
+                if(user){
+                    this.isLogged = true
+					this.avatar = user.photoURL
+                } else {
+                    this.isLogged = false
+					this.avatar = userAvatar
+                }
+            });
+        },
+		methods: {
 
+		}
+	}
+</script>
+
+<style scoped>
+	nav a#user img{
+		padding: 10px;
+		width: 57.5px;
+	}
 	nav a#user{
+		border: 2.5px solid rgba(244, 5, 82,0);
+		padding: 0;
 		height: 65px;
 		width: 65px;
 		border-radius: 100%;
@@ -33,6 +67,9 @@ import { RouterLink } from 'vue-router'
 	}
 	.active{
 		border-bottom: 3px solid #f40552;
+	}
+	.active-user{
+		border: 2.5px solid #f40552 !important;
 	}
     nav{
 		transition: all .3s ease-in-out;

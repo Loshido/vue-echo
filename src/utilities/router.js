@@ -1,35 +1,60 @@
-import {createRouter, createWebHistory} from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import Home from "../components/Home.vue";
 import Page from "../components/Articles/Page.vue";
 import Article from "../components/Articles/Article.vue";
 import Life from "../components/Life/Life.vue";
+import auth from "../components/auth/auth.vue";
 
 const router = createRouter({
-    history: createWebHistory(import.meta.env.BASE_URL),
-    routes: [
-      {
-        path: '/',
-        name: 'home',
-        component: Home
-      },
-      {
-        path: '/shop',
-        name: 'shop',
-        component: Page,
-      },
-      {
-        path: '/shop/:article',
-        name: 'article',
-        component: Article,
-        props: true
-      },
-      {
-        path: '/life/:time',
-        props: true,
-        name: 'life',
-        component: Life,
-      }
-    ]
-  })
-  
-  export default router
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [
+    {
+      	path: "/",
+      	name: "home",
+      	component: Home,
+    },
+    {
+      	path: "/shop",
+      	name: "shop",
+      	component: Page,
+    },
+    {
+      	path: "/shop/:article",
+      	name: "article",
+      	component: Article,
+      	props: true,
+    },
+    {
+      	path: "/life/:time",
+      	props: true,
+      	name: "life",
+      	component: Life,
+    },
+    {
+      	path: "/auth",
+      	name: "auth",
+      	component: auth,
+      	redirect: (to) => {
+      	  	return { path: "/auth/login" };
+      	},
+      	children: [
+      	  	{
+      	  	  	path: "login",
+				name: "login",
+      	  	  	component: () => import("../components/auth/login.vue"),
+      	  	},
+      	  	{
+      	  	  	path: "register",
+				name: "register",
+      	  	  	component: () => import("../components/auth/register.vue"),
+      	  	},
+      	  	{
+      	  	  	path: "logged",
+				name: "logged",
+      	  	  	component: () => import("../components/auth/logged.vue"),
+      	  	},
+      	],
+    },
+  ],
+});
+export default router;
