@@ -24,9 +24,10 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
         },
         methods: {
             register(){
+                console.log(this.email,this.password)
                 const auth = getAuth();
                 createUserWithEmailAndPassword(auth,this.email, this.password)
-                    .then((userCredential) => {
+                    .then(() => {
                     this.$router.push("/")
                 })
                 .catch((error) => {

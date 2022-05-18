@@ -12,6 +12,20 @@
 			background-image: url(./src/assets/back.png);
 			background-size: 15%;
 			overflow-x: hidden;
+			animation: task 120s infinite;
+			animation-iteration-count: infinite;
+		}
+		
+		@keyframes task {
+			0% {
+            background-position: 0 0;
+			}
+			/* 50% {
+				background-position: 1000px -1000px;
+			} */
+			100% {
+				background-position: 0 1000px;
+			}
 		}
 		@media (max-width: 1000px) {
 			body{

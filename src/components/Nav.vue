@@ -12,7 +12,8 @@ import { RouterLink } from 'vue-router'
 		<RouterLink to="/" active-class="active">Home</RouterLink>
 		<RouterLink to="/shop" active-class="active">Scripts</RouterLink>
 		<RouterLink active-class="active" to="/life/me">Life</RouterLink>
-		<RouterLink to="/auth" id="user"  active-class="active-user"><img :src="avatar" alt="Profil Picture"></RouterLink>
+		<RouterLink active-class="active" to="/memo">Memo</RouterLink>
+		<!-- <RouterLink to="/auth" id="user"  active-class="active-user"><img :src="avatar" alt="Profil Picture"></RouterLink> -->
 	</nav>
 </template>
 

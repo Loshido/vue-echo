@@ -24,9 +24,10 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
         },
         methods: {
             login(){
+                console.log(this.email,this.password)
                 const auth = getAuth();
                 signInWithEmailAndPassword(auth,this.email, this.password)
-                    .then((userCredential) => {
+                    .then(() => {
                     this.$router.push("/")
                 })
                 .catch((error) => {

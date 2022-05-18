@@ -1,11 +1,11 @@
 
 <template>
-    <h2>Aujourd'hui nous sommes le {{today.getDate()}} {{toMonth(today)}}, en {{today.getFullYear()}} ✨.
-        <h4>Et je suis né le {{first.getDate()}} {{toMonth(first)}} {{first.getFullYear()}}. Cela fait donc <a href="#tab" id="weeks" v-text="getSpecificWeeks(first)"></a> semaines que je vies 🦦.</h4>
+    <h2>Aujourd'hui nous sommes le {{ displayToday }} ✨.
+    <hr id="separ">
+        <h4>Et je suis né le {{ displayBirthday }}. Cela fait donc <a href="#tab" v-text="displayWeeks"></a> semaines que je vies 🦦.</h4>
     </h2>
     <h3 v-if="time=='me'">Chacun de ces cubes représentent une semaine de ma vie</h3>
-    <h3 v-else-if="time.length > 12">Vous avez saisis {{getNewDate(time)}}</h3>
-    <h3 v-else-if="input!=''">Vous avez saisis {{getNewDate(input)}}</h3>
+    <h3 v-else>Vous avez saisis {{computedNewDate}}</h3>
     <div id="aside">
         <form>
             <label>
@@ -20,7 +20,7 @@
     </div>
     <div id="tab">
         <div class="week" v-for="week in weeks" :key="week" @mouseover="CubeClicked(week)" :id="week+'cube'">
-            <span class="tooltip">{{toExposed(current,week)}}</span>
+            <span class="tooltip">{{toExposed}}</span>
         </div>
     </div>
 </template>
@@ -44,7 +44,6 @@ import { toNumber } from "@vue/shared"
                 var temp = new Date(a).getTime()
                 console.log(new Date(a).getFullYear())
                 if(new Date(a).getFullYear() > 1900) {
-                    // this.$router.push("/life/"+temp)
                     this.$router.push({
                         name: 'life', params: { time: temp}
                     })
@@ -55,9 +54,6 @@ import { toNumber } from "@vue/shared"
             }
         },
         methods: {
-            getSpecificWeeks(x){
-                return Math.ceil(this.diffDays(x,this.today)/7);
-            },
             toMonth(x){
                 const month = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"];
                 return month[x.getMonth()]
@@ -72,25 +68,38 @@ import { toNumber } from "@vue/shared"
                 };
                 return date;
             },
-            toExposed(x){
+            CubeClicked(key){
+                const node = document.getElementById(key+"cube");
+                node.style.animation = "clicked 1s ease-in-out";
+                setTimeout(() => {node.style.animation = "";},1000)
+            },
+        },
+        computed: {
+            displayBirthday(){
+                return `${this.first.getDate()} ${this.toMonth(this.first)} ${this.first.getFullYear()}`
+            },
+            displayToday(){
+                return `${this.today.getDate()} ${this.toMonth(this.today)}, en ${this.today.getFullYear()}`
+            },
+            displayWeeks(){
+                return Math.ceil(this.diffDays(this.first,this.today)/7);
+            },
+            computedNewDate(){
+                let x = this.time
+                if(typeof(x)=="string"){x = toNumber(x)}
+                if (!(x instanceof Date)){
+                    x = new Date(x)
+                }
+                return x.getDate() + " " + this.toMonth(x) + " " + x.getFullYear()
+            },
+            toExposed(){
+                let x = this.current
                 const exposed = {date: x.getDate(),month: this.toMonth(x),year: x.getFullYear()}
                 x = this.addDay(x,7);
                 while(x.getDay()!=1){x = this.addDay(x,-1);};
                 const endOfWeek = x.getDate();
                 return exposed.date+"-"+endOfWeek+ " " +exposed.month+" "+exposed.year;
             },
-            CubeClicked(key){
-                const node = document.getElementById(key+"cube");
-                node.style.animation = "clicked 1s ease-in-out";
-                setTimeout(() => {node.style.animation = "";},1000)
-            },
-            getNewDate(x){
-                if(typeof(x)=="string"){x = toNumber(x)}
-                if (!(x instanceof Date)){
-                    x = new Date(x)
-                }
-                return x.getDate() + " " + this.toMonth(x) + " " + x.getFullYear()
-            }
         },
         created(){
             if(this.time != 'me'){
@@ -103,6 +112,10 @@ import { toNumber } from "@vue/shared"
 </script>
 
 <style scoped>
+    hr#separ{
+        margin-right: 92%;
+        border: 2px solid #f40552;
+    }
     input{
         margin: 1rem;
         padding: 1rem;
@@ -130,8 +143,12 @@ import { toNumber } from "@vue/shared"
         margin-top: 15vh;
     }
     @media (max-width: 1000px) {
+        hr#separ{
+            margin: 0 78% 0 5%;
+
+        }
         h2{
-            margin: 18vh 0 0 0;
+            margin: 3vh 4vw 0 4vw;
             text-align: center;
             font-size: .9rem;
         }
@@ -158,7 +175,6 @@ import { toNumber } from "@vue/shared"
     }
 
     div.week:hover .tooltip{visibility: visible;}
-    span#weeks{text-decoration: underline;}
     div#tab{
         padding: 25px;
         margin: 10vh 20vw;

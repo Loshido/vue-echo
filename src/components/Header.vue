@@ -96,7 +96,7 @@ import Nav from "./Nav.vue";
 		position: initial;
 		justify-content: center; 
 		min-height: 15vh;
-		height: 25vh;
+		height: auto;
 		max-height: 30vh;
 		/* height: 15vh; */
 	}

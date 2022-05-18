@@ -31,6 +31,11 @@ const router = createRouter({
       	component: Life,
     },
     {
+      	path: "/memo",
+      	name: "memo",
+      	component: () => import("../components/Life/Memo.vue"),
+    },
+    {
       	path: "/auth",
       	name: "auth",
       	component: auth,
