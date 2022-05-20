@@ -1,7 +1,7 @@
 
 <template>
     <h2>Aujourd'hui nous sommes le {{ displayToday }} ✨.
-    <hr id="separ">
+        <hr id="separ">
         <h4>Et je suis né le {{ displayBirthday }}. Cela fait donc <a href="#tab" v-text="displayWeeks"></a> semaines que je vies 🦦.</h4>
     </h2>
     <h3 v-if="time=='me'">Chacun de ces cubes représentent une semaine de ma vie</h3>
@@ -20,7 +20,7 @@
     </div>
     <div id="tab">
         <div class="week" v-for="week in weeks" :key="week" @mouseover="CubeClicked(week)" :id="week+'cube'">
-            <span class="tooltip">{{toExposed}}</span>
+            <span class="tooltip">{{toExposed(current)}}</span>
         </div>
     </div>
 </template>
@@ -73,6 +73,13 @@ import { toNumber } from "@vue/shared"
                 node.style.animation = "clicked 1s ease-in-out";
                 setTimeout(() => {node.style.animation = "";},1000)
             },
+            toExposed(x){
+                const exposed = {date: x.getDate(),month: this.toMonth(x),year: x.getFullYear()}
+                x = this.addDay(x,7);
+                while(x.getDay()!=1){x = this.addDay(x,-1);};
+                const endOfWeek = x.getDate();
+                return exposed.date+"-"+endOfWeek+ " " +exposed.month+" "+exposed.year;
+            },
         },
         computed: {
             displayBirthday(){
@@ -91,15 +98,7 @@ import { toNumber } from "@vue/shared"
                     x = new Date(x)
                 }
                 return x.getDate() + " " + this.toMonth(x) + " " + x.getFullYear()
-            },
-            toExposed(){
-                let x = this.current
-                const exposed = {date: x.getDate(),month: this.toMonth(x),year: x.getFullYear()}
-                x = this.addDay(x,7);
-                while(x.getDay()!=1){x = this.addDay(x,-1);};
-                const endOfWeek = x.getDate();
-                return exposed.date+"-"+endOfWeek+ " " +exposed.month+" "+exposed.year;
-            },
+            }
         },
         created(){
             if(this.time != 'me'){
@@ -112,9 +111,14 @@ import { toNumber } from "@vue/shared"
 </script>
 
 <style scoped>
+    h2:hover hr#separ{
+        margin-right: 57%;
+        transition: margin .3s ease-in-out;
+    }
     hr#separ{
         margin-right: 92%;
         border: 2px solid #f40552;
+        transition: margin .3s ease-in-out;
     }
     input{
         margin: 1rem;
@@ -144,8 +148,7 @@ import { toNumber } from "@vue/shared"
     }
     @media (max-width: 1000px) {
         hr#separ{
-            margin: 0 78% 0 5%;
-
+            display: none;
         }
         h2{
             margin: 3vh 4vw 0 4vw;

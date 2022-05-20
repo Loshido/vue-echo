@@ -36,6 +36,16 @@ const router = createRouter({
       	component: () => import("../components/Life/Memo.vue"),
     },
     {
+      	path: "/tools",
+      	name: "tools",
+      	component: () => import("../components/tools/tools-handler.vue"),
+    },
+	{
+		path: "/tools/download-estimator",
+		name: "download",
+		component: () => import("../components/tools/download.vue")
+	},
+    {
       	path: "/auth",
       	name: "auth",
       	component: auth,

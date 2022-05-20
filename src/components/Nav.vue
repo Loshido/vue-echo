@@ -6,13 +6,13 @@ import { RouterLink } from 'vue-router'
 
 <template>
     <nav>
-		<a href="https://vuejs.org/" target="_blank">VueJS</a>
+		<!-- <a href="https://vuejs.org/" target="_blank">VueJS</a>
 		<a href="https://firebase.google.com/" target="_blank">Firebase</a>
-		<a href="https://github.com/loshido" target="_blank">Github</a>
+		<a href="https://github.com/loshido" target="_blank">Github</a> -->
 		<RouterLink to="/" active-class="active">Home</RouterLink>
 		<RouterLink to="/shop" active-class="active">Scripts</RouterLink>
 		<RouterLink active-class="active" to="/life/me">Life</RouterLink>
-		<RouterLink active-class="active" to="/memo">Memo</RouterLink>
+		<RouterLink active-class="active" to="/tools">Outils</RouterLink>
 		<!-- <RouterLink to="/auth" id="user"  active-class="active-user"><img :src="avatar" alt="Profil Picture"></RouterLink> -->
 	</nav>
 </template>
@@ -91,8 +91,11 @@ import { RouterLink } from 'vue-router'
 		transition: background-color .2s ease-in-out;
 	}
 	nav a:hover{
-		background-color: #f40552;
-		transition: background-color .2s ease-in-out;
+		/* background-color: #f40552; */
+		background: #f40552;
+		background: -webkit-linear-gradient(0deg, #f40552 0%, rgba(244, 5, 82, 0.8) 100%);
+		background: linear-gradient(180deg, #f40552 0%, rgba(244, 5, 82, 0.8) 100%);
+		transition: background .2s ease-in-out;
 	}
 	@media (max-width: 1000px){
 		nav{

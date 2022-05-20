@@ -1,9 +1,7 @@
 <script setup>
 	import Header from "./components/Header.vue";
 	import Nav from "./components/Nav.vue";
-	// import Home from "./components/Home.vue";
 	import { RouterView } from 'vue-router'
-	import Auth from './components/auth/auth.vue'
 </script>
 
 <template>
@@ -16,7 +14,9 @@
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&family=Koulen&family=Rubik:wght@400;700&display=swap');
+
+
 .link:hover{
 	text-decoration: none;
 	box-shadow: 0 0 10px #f40552;
@@ -130,8 +130,8 @@ div.features-holder{
 }
 section.module#faq{
 	padding: 5% 15%;
-	background-color: rgba(0, 0, 0, 0.3);
-	box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);
+	background-color: rgba(0, 0, 0, 0.4);
+	box-shadow: 0 0 100px rgba(0, 0, 0, 0.4);
 }
 section.module#faq .faq-content{
 	padding: 10px;
@@ -143,6 +143,13 @@ section.module#faq .faq-title a{
 section.module#faq .faq-title{
 	text-align: unset;
 	margin: 10px;
+}
+section.module#faq .faq:hover{
+	transition: transform .3s ease-in;
+}
+section.module#faq .faq:hover{
+	transform: translateX(.5%);
+	transition: transform .3s ease-out;
 }
 
 

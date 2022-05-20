@@ -1,6 +1,7 @@
 <script setup>
     import Main from "./Home/Main.vue";
 	import Feature from "./Home/Feature.vue";
+	import Providers from "./Home/Providers.vue"
 	import {Features,FAQ, Texts} from "../assets/data.js";
 </script>
 <template>
@@ -23,7 +24,8 @@
 		</div>
 		<h2 v-html="Texts.nolimits">
 		</h2>
-	</section>
+	</section> 
+	<Providers />
 	<section class="module" id="faq">
 		<h1>F.A.Q.</h1>
 		<div v-for="(item, index) in FAQ()" class="faq" :id=index >
