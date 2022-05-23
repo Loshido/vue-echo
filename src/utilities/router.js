@@ -45,6 +45,16 @@ const router = createRouter({
 		name: "download",
 		component: () => import("../components/tools/download.vue")
 	},
+	{
+		path: "/tools/text-information",
+		name: "text-information",
+		component: () => import("../components/tools/text.vue")
+	},
+	{
+		path: "/tools/color",
+		name: "color",
+		component: () => import("../components/tools/color.vue")
+	},
     {
       	path: "/auth",
       	name: "auth",

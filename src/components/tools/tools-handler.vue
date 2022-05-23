@@ -7,8 +7,8 @@ import { RouterLink } from 'vue-router'
     <div id="tools">
         <nav id="nav-tools">
             <RouterLink to="/tools/download-estimator" id="download">Estimation de temps de telechargements</RouterLink>
-            <RouterLink to="/">¯\_(ツ)_/¯</RouterLink>
-            <RouterLink to="/">¯\_(ツ)_/¯</RouterLink>
+            <RouterLink to="/tools/text-information" id="text">Information technique sur un texte</RouterLink>
+            <RouterLink to="/tools/color">Gestion de couleurs</RouterLink>
             <RouterLink to="/">¯\_(ツ)_/¯</RouterLink>
         </nav>
     </div>
@@ -29,6 +29,10 @@ import { RouterLink } from 'vue-router'
     nav#nav-tools a#download{
         font-size: 4em;
     }
+    nav#nav-tools a#text{
+        font-size: 4em;
+        line-height: 1.3em;
+    }
     nav#nav-tools a:first-child{
         border-top: none !important;
     }
@@ -38,6 +42,7 @@ import { RouterLink } from 'vue-router'
 
         font-family: 'Koulen';
         text-decoration: none;
+        line-height: 1.3em;
         background-color: rgba(0, 0, 0, 0.4);
         width: 100%;
         height: 100%;

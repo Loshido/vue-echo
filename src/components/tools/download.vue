@@ -1,7 +1,7 @@
 <template>
-    <h2 id="title">Cet outil permet de calculer le temps que prend un téléchargement d'une taille donnée en fonction d'un débit donnée.</h2>
+    <h2 id="title">Cet outil permet de calculer le temps que prend le téléchargement d'un fichier d'une taille spécifique en fonction d'un débit spécifique.</h2>
     <h1 class="warning">⚠️ En Construction ⚠️</h1>
-    <h3 class="warning">Ne marchera pas tant que la version final soit prête.</h3>
+    <h3 class="warning">Ne marchera pas tant que la version finale soit prête.</h3>
     <div id="module-container">
         <form id="poids">
             <h2 class="title-box">Poids</h2>
