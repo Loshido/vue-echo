@@ -75,16 +75,6 @@ const Texts = {
     nolimits: "<i><q>Mesurer les progrès de la programmation en lignes de code, c’est comme mesurer les progrès de la construction d’un avion en poids.</q></i>"
 }
 
-import encryption from "./holder/encryption.svg"
-import finishline from "./holder/finishline.svg"
-import inspiration from "./holder/inspiration.svg"
-import investing from "./holder/investing.svg"
-import moving from "./holder/moving.svg"
-import relax from "./holder/relax.svg"
-import sheet from "./holder/sheet.svg"
-import videographer from "./holder/videographer.svg"
-import warning from "./holder/warning.svg"
-import working from "./holder/working.svg"
 const articles = [
     {
         title: "Encryption",
@@ -92,7 +82,7 @@ const articles = [
         content: "Encryption Text",
         path: "/shop/encryption",
         image: {
-            src: encryption,
+            src: () => import('./holder/encryption.svg'),
             alt: "encryption"
         }
     },
@@ -102,7 +92,7 @@ const articles = [
         key: 'finishline',
         path: "/shop/finishline",
         image: {
-            src: finishline,
+            src: () => import('./holder/finishline.svg'),
             alt: "finishline"
         }
     },
@@ -112,7 +102,7 @@ const articles = [
         key: 'inspiration',
         path: "/shop/inspiration",
         image: {
-            src: inspiration,
+            src: () => import('./holder/inspiration.svg'),
             alt: "inspiration"
         }
     },
@@ -122,7 +112,7 @@ const articles = [
         key: 'investing',
         path: "/shop/investing",
         image: {
-            src: investing,
+            src: () => import('./holder/investing.svg'),
             alt: "investing"
         }
     },
@@ -132,7 +122,7 @@ const articles = [
         key: 'moving',
         path: "/shop/moving",
         image: {
-            src: moving,
+            src: () => import('./holder/moving.svg'),
             alt: "moving"
         }
     },
@@ -142,7 +132,7 @@ const articles = [
         key: 'relax',
         path: "/shop/relax",
         image: {
-            src: relax,
+            src: () => import('./holder/relax.svg'),
             alt: "relax"
         }
     },
@@ -152,7 +142,7 @@ const articles = [
         key: 'sheet',
         path: "/shop/sheet",
         image: {
-            src: sheet,
+            src: () => import('./holder/sheet.svg'),
             alt: "sheet"
         }
     },
@@ -162,7 +152,7 @@ const articles = [
         key: 'videographer',
         path: "/shop/videographer",
         image: {
-            src: videographer,
+            src: () => import('./holder/videographer.svg'),
             alt: "videographer"
         }
     },
@@ -172,7 +162,7 @@ const articles = [
         key: 'warning',
         path: "/shop/warning",
         image: {
-            src: warning,
+            src: () => import('./holder/warning.svg'),
             alt: "warning"
         }
     },
@@ -182,7 +172,7 @@ const articles = [
         key: 'working',
         path: "/shop/working",
         image: {
-            src: working,
+            src: () => import('./holder/working.svg'),
             alt: "working"
         }
     },
