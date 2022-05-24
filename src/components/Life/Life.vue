@@ -102,8 +102,8 @@ import { toNumber } from "@vue/shared"
         },
         created(){
             if(this.time != 'me'){
-                this.current = new Date()
-                this.current.setTime(this.time)
+                this.current = new Date(this.time)
+                // this.current.setTime()
             }
             this.weeks = Math.ceil(this.diffDays(this.current,this.today)/7);
         }
