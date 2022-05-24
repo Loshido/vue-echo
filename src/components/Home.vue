@@ -28,7 +28,7 @@
 	<Providers />
 	<section class="module" id="faq">
 		<h1>F.A.Q.</h1>
-		<div v-for="(item, index) in FAQ()" class="faq" :id=index >
+		<div v-for="(item, index) in FAQ()" class="faq" :id="index" >
 			<h2 class="faq-title">
 				<a href="#" class="link">#</a>
 				{{item.title}}
