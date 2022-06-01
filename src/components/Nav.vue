@@ -13,6 +13,7 @@ import { RouterLink } from 'vue-router'
 		<RouterLink to="/shop" active-class="active">Scripts</RouterLink>
 		<RouterLink active-class="active" to="/life/me">Life</RouterLink>
 		<RouterLink active-class="active" to="/tools">Outils</RouterLink>
+		<a href="https://fley-vuejs.web.app" target="_blank">Fley</a>
 		<!-- <RouterLink to="/auth" id="user"  active-class="active-user"><img :src="avatar" alt="Profil Picture"></RouterLink> -->
 	</nav>
 </template>
