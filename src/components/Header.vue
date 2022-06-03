@@ -3,7 +3,7 @@ import Nav from "./Nav.vue";
 </script>
 
 <template>
-  	<header>
+  	<header :class="class">
 		<h1>
 			<a>Echo</a>
 		</h1>
@@ -11,52 +11,31 @@ import Nav from "./Nav.vue";
 	</header>
 </template>
 
+<script>
+	export default {
+		data(){
+			return {
+				class: ""
+			}
+		},
+		created(){
+			this.$router.afterEach(() => {
+				(this.$route.name == "home")?this.class = "head-home":this.class = "";
+			})
+		}
+	}
+</script>
 
 <style scoped>
-.is-typed {
-  	font-family: "Monaco";
-}
-
-.is-typed span.typed {
-  	color: black;
-}
-
-.is-typed span.cursor {
-  	display: inline-block;
-  	width: 3px;
-  	background-color: black;
-  	animation: blink 1s infinite;
-}
-
-.is-typed span.underscore {
-  	display: inline-flex;
-  	width: 10px;
-  	height: 1px;
-  	align-items:flex-end;
-  	background-color: black;
-  	animation: blink 1s infinite;
-}
-
-.is-typed span.cursor.typing {
-  	animation: none;
-}
-
-@keyframes blink {
-  	49% {
-  	  	background-color: black;
-  	}
-  	50% {
-  	  	background-color: transparent;
-  	}
-  	99% {
-    	background-color: transparent;
-  	}
-}
-
+	header.head-home{
+		position: absolute;
+		top: 0;
+		z-index: 1;
+	}
 	header{
-    top: 0;
-    z-index: 3;
-    position: absolute;
+		/* top: 0;
+		z-index: 1;
+		position: absolute; */
 		padding: 0 10vw;
 
 		width: 100vw;

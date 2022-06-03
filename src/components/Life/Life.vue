@@ -144,7 +144,6 @@ import { toNumber } from "@vue/shared"
         }
     h2{
         margin: 5vh 15vw;
-        margin-top: 15vh;
     }
     @media (max-width: 1000px) {
         hr#separ{

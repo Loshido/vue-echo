@@ -43,7 +43,6 @@ const router = createRouter({
 	{
 		path: "/tools/:tool",
 		name: "specific-tool",
-		
 	}
   ],
 });
