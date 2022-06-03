@@ -5,17 +5,49 @@
 </script>
 
 <template>
-	<Header id="header"/>
+	<Header id="header" v-if="concept" />
 	<RouterView />
-	<footer>
+	<footer v-if="concept">
 		<h3>Copyrights ©2022 Loshido</h3>
 		<Nav />
 	</footer>
 </template>
 
+<script>
+export default {
+	data(){
+		return {
+			concept: true,
+			background: ""
+		}
+	},
+	watch:{
+		background(v){
+			alert(v)
+		},
+		concept(value){
+			if(value) {
+				document.body.style.backgroundColor = "#161923";
+				document.body.style.backgroundSize = "15%"
+				document.body.classList.remove("pattern-cross-dots-xl")
+			} else {
+				document.body.style.backgroundColor = "#002556";
+				document.body.style.backgroundSize = 0
+				document.body.classList.add("pattern-cross-dots-xl")
+			};
+		}
+	},	
+	mounted(){
+		this.$router.afterEach(() => {
+			this.concept = !window.location.href.includes("concept")
+		})
+	}
+}
+</script>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&family=Koulen&family=Rubik:wght@400;700&display=swap');
-
+@import url(./ext/pattern.css);
 
 .link:hover{
 	text-decoration: none;
